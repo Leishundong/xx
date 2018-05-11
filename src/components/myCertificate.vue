@@ -50,7 +50,7 @@
 
         <div class="information">
             <div class="information-list certificate-flex">
-                <div class="list-txt flex-index">签</div>
+                <div class="list-txt flex-index">签wqwdqwdqwd</div>
                 <div class="list-txt flex-item">{{this.certificateInformation.issuanceoftime}}</div>
             </div>
         </div>
