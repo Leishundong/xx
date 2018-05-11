@@ -2,62 +2,62 @@
     <div class="certificate-information">
         <div class="certificate-header">
             <div class="header-item"><i class="head-left iconfont icon-icon-yxj-arrow-left" @click="returns()"/></div>
-            <div class="header-item"><h3 class="head-center">证书信息</h3></div>
+            <div class="header-item"><h3 class="head-center">证书信息:</h3></div>
             <div class="header-item"><i class="head-right iconfont icon-xiaoxi"/></div>
         </div>
 
         <div class="information">
             <div class="information-list certificate-flex">
-                <div class="list-txt flex-index">持有人姓名</div>
+                <div class="list-txt flex-index">持有人姓名:</div>
                 <div class="list-txt flex-item">{{this.certificateInformation.name}}</div>
             </div>
         </div>
 
         <div class="information">
             <div class="information-list certificate-flex">
-                <div class="list-txt flex-index">身份证号</div>
+                <div class="list-txt flex-index">身份证号:</div>
                 <div class="list-txt flex-item">{{this.certificateInformation.cardid}}</div>
             </div>
         </div>
 
         <div class="information">
             <div class="information-list certificate-flex">
-                <div class="list-txt flex-index">出生年月</div>
+                <div class="list-txt flex-index">出生年月:</div>
                 <div class="list-txt flex-item">{{this.certificateInformation.birthdate}}</div>
             </div>
         </div>
 
         <div class="information">
             <div class="information-list certificate-flex">
-                <div class="list-txt flex-index">证书编号</div>
+                <div class="list-txt flex-index">证书编号:</div>
                 <div class="list-txt flex-item">{{this.certificateInformation.certificatenumber}}</div>
             </div>
         </div>
 
         <div class="information">
             <div class="information-list certificate-flex">
-                <div class="list-txt flex-index">发证机构</div>
+                <div class="list-txt flex-index">发证机构:</div>
                 <div class="list-txt flex-item">{{this.certificateInformation.issuanceagencies}}</div>
             </div>
         </div>
 
         <div class="information">
             <div class="information-list certificate-flex">
-                <div class="list-txt flex-index">批准日期</div>
+                <div class="list-txt flex-index">批准日期:</div>
                 <div class="list-txt flex-item">{{this.certificateInformation.approvalofdate}}</div>
             </div>
         </div>
 
         <div class="information">
             <div class="information-list certificate-flex">
-                <div class="list-txt flex-index">签发日期</div>
+                <div class="list-txt flex-index">签</div>
                 <div class="list-txt flex-item">{{this.certificateInformation.issuanceoftime}}</div>
             </div>
         </div>
 
         <div class="information">
             <div class="information-list certificate-flex">
-                <div class="list-txt flex-index">证书状态</div>
+                <div class="list-txt flex-index">证书状态:</div>
                 <div class="list-txt flex-item">{{this.certificateInformation.bindingtype}}</div>
             </div>
         </div>
