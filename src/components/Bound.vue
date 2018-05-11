@@ -4,7 +4,7 @@
             <router-link :to="{ path: 'certificateList',query:{isjump:false}}">
                 <img class="head-left header-img" src="/src/assets/img/back.png">
             </router-link>
-            <div class="header-item"><h1 class="head-center">申请绑定证书</h1></div>
+            <div class="header-item"><h1 class="head-center">申请绑定证书:</h1></div>
         </div>
         <router-link to="/what">sadasdad</router-link>
         <form method="post" enctype="multipart/form-data" id="tf">
