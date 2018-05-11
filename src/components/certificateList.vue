@@ -1,7 +1,7 @@
 <template>
     <div id="certificatelist" class="certificate-list">
         <div class="certificate-header">
-            <router-link :to="{name:'info',params:{id:id}}"class="header-item"><img class="head-left header-img" src="/src/assets/img/personal.png"/></router-link>
+            <router-link :to="{name:'info',params:{id:user}}"class="header-item"><img class="head-left header-img" src="/src/assets/img/personal.png"/></router-link>
             <div class="header-item"><h3 class="head-center">证书列表</h3></div>
             <div class="header-item"><img class="head-right header-img" src="/src/assets/img/notice.png"/></div>
         </div>
@@ -46,13 +46,15 @@
             }
             else{
                 this.getlist();
+                this.getunlist();
             }
 
         },
         data () {
             return {
                 userid:'',
-                id:this.$route.params.userId,
+                user:this.$route.params.userId,
+                id:'',
                 certid:'',
                 items:[],
                 certificateList: {
@@ -71,22 +73,27 @@
                 this.$router.push({ name: 'notboundcert', params: { certId: this.certid ,userid:this.$route.params.userId}})
             },
           getlist:function () {
+                alert(this.$route.params.userId)
               this.$http.post('http://www.embracex.com:8081/certificate/mycertificate',{
                   userid:this.$route.params.userId,
               },{emulateJSON: true}).then(function (res) {
                   this.certificateList.bound = res.body;
-              });
-              this.$http.post('http://www.embracex.com:8081/user/findone',{
-                   id:this.$route.params.userId,
-              },{emulateJSON: true}).then(function (resp) {
-                  this.$http.post('http://www.embracex.com:8081/certificate/fuzzy',{
-                      usercardid:resp.body.cardid,
-                      name:resp.body.name
-                  },{emulateJSON: true}).then(function (re) {
-                      this.certificateList.unbound = re.body;
-                  });
+                  console.log(this.certificateList.unbound)
               })
           },
+            getunlist:function () {
+                this.$http.post('http://www.embracex.com:8081/user/findone',{
+                    id:this.$route.params.userId,
+                },{emulateJSON: true}).then(function (resp) {
+                    this.$http.post('http://www.embracex.com:8081/certificate/fuzzy',{
+                        usercardid:resp.body.cardid,
+                        name:resp.body.name
+                    },{emulateJSON: true}).then(function (re) {
+                        this.certificateList.unbound = re.body;
+                        console.log(this.certificateList.unbound)
+                    });
+                })
+            }
         }
     }
 </script>
