@@ -1,5 +1,5 @@
 aa
 Git tracks changes.
 Git has a mutable index called stage.
-the stupid boss
+the stupid a boss
 Creating a new branch is quick and simple.
